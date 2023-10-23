@@ -53,12 +53,19 @@ if (isset($_POST['submit'])) {
     <head>
         <meta charset="utf-8">
         <title>Login</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body>
+    <nav class="navbar bg-body-tertiary">
+  <div style="display: flex;flex-direction: row;justify-content: space-between;width: 100%; align-items:center;">
+    <a href="restoran.php"><div style="display:flex;align-items: center; margin-left: 40px;"><img src="../image/logo3.png" alt="ImageDescription" class="logo" style="height: 60px; width: 180px;"></div></a>
+
+  </div>
+</nav>
     <section class="vh-100 d-flex justify-content-center align-items-center" style="background-color: #FFEFBA;">
         <div class="container">
             <div class="row d-flex justify-content-center align-items-center h-100">

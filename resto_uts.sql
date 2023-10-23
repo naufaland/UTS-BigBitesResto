@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 23, 2023 at 09:05 AM
+-- Generation Time: Oct 23, 2023 at 01:54 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -85,21 +85,24 @@ CREATE TABLE `menu` (
 --
 
 INSERT INTO `menu` (`id`, `nama`, `category`, `image`, `harga`) VALUES
-(1, 'Beef Burger', 'Lunch', 'https://img.freepik.com/free-photo/tasty-burger-isolated-white-background-fresh-hamburger-fastfood-with-beef-cheese_90220-1063.jpg?w=740&t=st=1697979850~exp=1697980450~hmac=b49e3494cc172d22dae30f04e5a231d5c6a6f7bd88e72e8b424a275ec468c79d', '20000'),
+(1, 'Beef Burger', 'Lunch', 'https://img.freepik.com/free-photo/tasty-burger-isolated-white-background-fresh-hamburger-fastfood-with-beef-cheese_90220-1063.jpg?t=st=1697979846~exp=1697980446~hmac=ccd6c6fc82261e51ac100156635a6cc30346a2f1ab2aa4ecb4cadb27e7936078', '23000'),
 (2, 'Mie Goreng', 'Lunch', 'https://img.freepik.com/free-photo/top-view-tasty-composition-noodles-table_23-2148803862.jpg?w=740&t=st=1697981521~exp=1697982121~hmac=0ae6a1f85b4f66f4ca9cbc02f92ed675d8bb74bd88af837cfd49ccb8e8c239b6', '20000'),
 (3, 'Miso Ramen', 'Lunch', 'https://img.freepik.com/free-photo/assortment-noodles-bowl_23-2148803809.jpg?w=1060&t=st=1697983698~exp=1697984298~hmac=1156f259f180e868708c907b602f1336a330e1deb13fcb1d10fbc8aae0c4512f', '30000'),
 (4, 'Ice Latte', 'Drink', 'https://img.freepik.com/free-photo/iced-coffee-cup_1339-1733.jpg?w=360&t=st=1697984111~exp=1697984711~hmac=ee4c625911a676074376bf48a5216a69c636f035005c59298cf462e073ff10f8', '15000'),
 (5, 'Ice Matcha Latte', 'Drink', 'https://img.freepik.com/free-photo/green-tea-fresh-milk-served-with-delicious-snacks_1150-24494.jpg?w=360&t=st=1697984282~exp=1697984882~hmac=17884733dbff945e7ba1d68cd212e4ccfd8c8bcf2f108531f5bf0ef7ff479973', '17000'),
 (6, 'Banana Split', 'Dessert', 'https://www.tasteofhome.com/wp-content/uploads/2018/01/All-American-Banana-Split_EXPS_FT20_37953_F_0716_1.jpg?fit=700%2C1024', '20000'),
-(7, 'Dimsum', 'Appetizer', 'https://palpres.disway.id/upload/83f167921e5a8d3677aead0797407909.jpeg', '10000'),
+(7, 'Nasi Ayam Geprek', 'Lunch', 'https://assets-a1.kompasiana.com/items/album/2023/08/10/ayam-geprek-removebg-64d50389633ebc267a30bde3.png?t=o&v=780', '23000'),
 (8, 'Pistachio Gelato', 'Dessert', 'https://www.saveur.com/uploads/2019/02/08/RSQCZRUP32T6N4BOZJSCSQHTCI.jpg?auto=webp', '15000'),
 (9, 'Ice Tea', 'Drink', 'https://magfood-amazy.com/wp-content/uploads/2017/12/ice-lemon-tea.jpg', '10000'),
 (10, 'California Roll', 'Appetizer', 'https://www.sidechef.com/recipe/8f379697-7d39-4f61-a336-fd4134eeee18.jpg?d=1408x1120', '20000'),
 (11, 'Caesar Salad', 'Appetizer', 'https://www.noracooks.com/wp-content/uploads/2022/06/vegan-caesar-salad-4.jpg', '15000'),
 (12, 'Chocolatte Lava Cake', 'Dessert', 'https://www.melskitchencafe.com/wp-content/uploads/2023/01/updated-lava-cakes7.jpg', '17500'),
-(13, 'Bakso Malang', 'Lunch', 'https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2023/08/02034124/ini-resep-bakso-malang-lezat-yang-menggugah-selera-halodoc.jpg.webp', '21000'),
-(14, 'Nasi Goreng Ayam', 'Lunch', 'https://awsimages.detik.net.id/community/media/visual/2022/08/07/resep-nasi-goreng-ayam-dan-ebi_43.jpeg?w=650&q=80', '23000'),
-(15, 'Nasi Ayam Geprek', 'Lunch', 'https://assets-a1.kompasiana.com/items/album/2023/08/10/ayam-geprek-removebg-64d50389633ebc267a30bde3.png?t=o&v=780', '25000');
+(13, 'Alpukat Kocok', 'Dessert', 'https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2022/07/29/3524045949.png', '12000'),
+(18, 'Dimsum', 'Appetizer', 'https://imgx.parapuan.co/crop/0x0:0x0/x/photo/2022/05/21/istock-626007330jpg-20220521084248.jpg', '17000'),
+(19, 'Hot Tea', 'Drink', 'https://assets-a1.kompasiana.com/items/album/2019/09/16/tea-5d7f4e0c0d823044bd67f8e2.jpg', '10000'),
+(20, 'Nasi Goreng Ayam', 'Lunch', 'https://asset.kompas.com/crops/N0sk4nA9PHwFZWLQmKOgXOzmWLo=/4x0:1000x664/750x500/data/photo/2022/05/04/627208b727a09.jpg', '20000'),
+(21, 'Pepperoni Pizza', 'Lunch', 'https://www.cobsbread.com/us/wp-content//uploads/2022/09/Pepperoni-pizza-850x630-1.png', '45000'),
+(22, 'Air Mineral (AQUA)', 'Drink', 'https://bebekbkb.com/wp-content/uploads/2023/08/AIR-MINERAL-600ML.jpg', '5000');
 
 -- --------------------------------------------------------
 
@@ -114,6 +117,23 @@ CREATE TABLE `order` (
   `image` varchar(250) NOT NULL,
   `harga` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `order`
+--
+
+INSERT INTO `order` (`id`, `user_id`, `nama`, `image`, `harga`) VALUES
+(16, 1, 'Alpukat Kocok', 'https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2022/07/29/3524045949.png', '12000'),
+(17, 1, 'Alpukat Kocok', 'https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2022/07/29/3524045949.png', '12000'),
+(18, 1, 'Ice Tea', 'https://magfood-amazy.com/wp-content/uploads/2017/12/ice-lemon-tea.jpg', '10000'),
+(19, 1, 'Ice Matcha Latte', 'https://img.freepik.com/free-photo/green-tea-fresh-milk-served-with-delicious-snacks_1150-24494.jpg?w=360&t=st=1697984282~exp=1697984882~hmac=17884733dbff945e7ba1d68cd212e4ccfd8c8bcf2f108531f5bf0ef7ff479973', '17000'),
+(20, 1, 'Mie Goreng', 'https://img.freepik.com/free-photo/top-view-tasty-composition-noodles-table_23-2148803862.jpg?w=740&t=st=1697981521~exp=1697982121~hmac=0ae6a1f85b4f66f4ca9cbc02f92ed675d8bb74bd88af837cfd49ccb8e8c239b6', '20000'),
+(21, 1, 'Miso Ramen', 'https://img.freepik.com/free-photo/assortment-noodles-bowl_23-2148803809.jpg?w=1060&t=st=1697983698~exp=1697984298~hmac=1156f259f180e868708c907b602f1336a330e1deb13fcb1d10fbc8aae0c4512f', '30000'),
+(22, 1, 'Bakso Malang', 'https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2023/08/02034124/ini-resep-bakso-malang-lezat-yang-menggugah-selera-halodoc.jpg.webp', '21000'),
+(23, 1, 'California Roll', 'https://www.sidechef.com/recipe/8f379697-7d39-4f61-a336-fd4134eeee18.jpg?d=1408x1120', '20000'),
+(24, 1, 'Dimsum', 'https://palpres.disway.id/upload/83f167921e5a8d3677aead0797407909.jpeg', '10000'),
+(25, 2, 'Banana Split', 'https://www.tasteofhome.com/wp-content/uploads/2018/01/All-American-Banana-Split_EXPS_FT20_37953_F_0716_1.jpg?fit=700%2C1024', '20000'),
+(26, 1, 'Ice Latte', 'https://img.freepik.com/free-photo/iced-coffee-cup_1339-1733.jpg?w=360&t=st=1697984111~exp=1697984711~hmac=ee4c625911a676074376bf48a5216a69c636f035005c59298cf462e073ff10f8', '15000');
 
 --
 -- Indexes for dumped tables
@@ -163,13 +183,13 @@ ALTER TABLE `master_user`
 -- AUTO_INCREMENT for table `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `order`
 --
 ALTER TABLE `order`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -15,6 +15,7 @@ if (!empty($_SESSION['id'])) {
     <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>ORDERS</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
@@ -24,10 +25,19 @@ if (!empty($_SESSION['id'])) {
         <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div class="container" style="background-color: #FFFFF0;">
-        <h3><i class='bx bx-run'></i><b>Ordered Menu</b></h3>
+<nav class="navbar bg-body-tertiary">
+  <div style="display: flex;flex-direction: row;justify-content: space-between;width: 100%; align-items:center;">
+    <a href="restoran.php"><div style="display:flex;align-items: center; margin-left: 40px;"><img src="../image/logo3.png" alt="ImageDescription" class="logo" style="height: 60px; width: 180px;"></div></a>
+    <div style="margin-right: 40px;">
+    <a href="restoran.php" class="btn" style="margin-right: 20px;">Menu</a>
+    <a href="logout.php" class="btn btn-danger">Logout</a>
+</div>
+
+  </div>
+</nav>
+    <div class="container" style="background-color: #FFFFF0;padding: 25px;">
+        <h3><b>Ordered Menu</b></h3>
         <br>
-        <a href="restoran.php" class="btn btn-primary"><i class='bx bx-exit'></i></a>
         <hr>
         <?php
         $userid = $_SESSION['id'];
@@ -73,10 +83,13 @@ if (!empty($_SESSION['id'])) {
             <?php
             }
             ?>
-            <tr>
-            <td class='text-center'>Total: Rp.<?php echo $total; ?></td>
-            </tr>
         </table>
+        <br/>
+        <div style="display:flex; justify-content: space-between; align-items: center;">
+        <div>Total: Rp.<?php echo $total; ?></div>
+        <button type="button" class="btn btn-default mr-3" onclick="alert('order berhasil')">Pesan</button>
+        </div>
+
     </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>

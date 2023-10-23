@@ -24,6 +24,7 @@ if (!empty($_SESSION['id'])) {
         <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+    
     <div class="container" style="background-color: #FFFFF0;">
     <div class="image d-flex justify-content-center">
     <img src="../image/logo1.png" alt="ImageDescription" class="logo">
@@ -32,7 +33,7 @@ if (!empty($_SESSION['id'])) {
             <h3><b>Restaurant Menu</b></h3>
         </div>
         <br>
-        <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#myModal">
+        <button href="addmenu.php" class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#myModal">
             <i class="fa fa-plus"></i> Add Menu
         </button>
         <a href="logoutadmin.php" class="btn btn-primary"><i class='bx bx-exit'></i></a>
@@ -74,10 +75,56 @@ if (!empty($_SESSION['id'])) {
                     <td class='text-center'><?php echo $harga; ?></td>
                     <td class='text-center'>
                         <span>
-                            <a href='editmenu.php?id=<?php echo $id; ?>' class='btn btn-warning mr-3 editmenu' title='Edit'>
+                            <a href='editmenu.php?id=<?php echo $id; ?>' data-bs-toggle="modal" data-bs-target="#modalEdit-<?php echo $id; ?>" class='btn btn-warning mr-3 editmenu' title='Edit'>
                                 <i class='fa fa-pencil-square-o fa-lg'></i>
                             </a>
                         </span>
+                                <!-- Modal Edit -->
+        <div id="modalEdit-<?php echo $id; ?>" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-center">Edit Menu</h4>
+                </div>
+                <div class="modal-body">
+                    <form action='editmenu.php?id=<?php echo $id; ?>' method="POST">
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="nama">Menu Name</label>
+                                <input type="text" class="form-control" name="nama" placeholder="What is the menu name?" required>
+                            </div>
+                            <br/>
+                            <div class="form-group col-md-12">
+                                <label for="image">Image</label>
+                                <input type="text" class="form-control" name="image" required>
+                            </div>
+                            <br/>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="category">Category</label>
+                                    <select class="form-control" name="category">
+                                        <option>Appetizer</option>
+                                        <option>Lunch</option>
+                                        <option>Drink</option>
+                                        <option>Dessert</option>                
+                                    </select>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="form-group col-md-9">
+                                <label for="harga">Harga</label>
+                                <input type="text" class="form-control" name="harga" required>
+                            </div>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" name="submit" class="btn btn-info btn-large" value="Submit">
+                    </form>
+                    <button type="button" class="btn btn-default mr-3" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
                     </td>
                     <td class='text-center'>
                         <span>
@@ -98,20 +145,21 @@ if (!empty($_SESSION['id'])) {
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <h4 class="modal-title text-center">Add New Menu</h4>
                 </div>
                 <div class="modal-body">
                     <form action="addmenu.php" method="POST">
                         <div class="form-row">
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md-12">
                                 <label for="nama">Menu Name</label>
                                 <input type="text" class="form-control" name="nama" placeholder="What is the menu name?" required>
                             </div>
-                            <div class="form-group col-md-6">
+                            <br/>
+                            <div class="form-group col-md-12">
                                 <label for="image">Image</label>
                                 <input type="text" class="form-control" name="image" required>
                             </div>
+                            <br/>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="category">Category</label>
@@ -123,7 +171,8 @@ if (!empty($_SESSION['id'])) {
                                     </select>
                                 </div>
                             </div>
-                            <div class="form-group col-md-6">
+                            <br/>
+                            <div class="form-group col-md-9">
                                 <label for="harga">Harga</label>
                                 <input type="text" class="form-control" name="harga" required>
                             </div>
@@ -132,11 +181,13 @@ if (!empty($_SESSION['id'])) {
                 <div class="modal-footer">
                     <input type="submit" name="submit" class="btn btn-info btn-large" value="Submit">
                     </form>
-                    <button type="button" class="btn btn-default mr-3" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default mr-3" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
+
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

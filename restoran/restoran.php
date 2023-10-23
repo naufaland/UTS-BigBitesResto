@@ -65,7 +65,16 @@ foreach ($categories as $value)
         <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+<nav class="navbar bg-body-tertiary">
+  <div style="display: flex;flex-direction: row;justify-content: space-between;width: 100%; align-items:center;">
+    <a href="restoran.php"><div style="display:flex;align-items: center; margin-left: 40px;"><img src="../image/logo3.png" alt="ImageDescription" class="logo" style="height: 60px; width: 180px;"></div></a>
+    <div style="margin-right: 40px;">
+    <a href="order.php" class="btn" style="margin-right: 20px;">Order</a>
+    <a href="logout.php" class="btn btn-danger">Logout</a>
+</div>
 
+  </div>
+</nav>
     <div class="container" style="background-color: #FFFFF0;padding: 25px;">
     <div class="image d-flex justify-content-center">
         <img src="../image/logo1.png" alt="ImageDescription" class="logo">
@@ -85,7 +94,7 @@ foreach ($categories as $value)
     echo $tab_content;
     ?>
             </div>
-            <div><a href="logout.php" class="btn btn-danger">Exit</a></div>
+
     </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
