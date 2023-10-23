@@ -67,7 +67,7 @@ foreach ($categories as $value)
 <body>
 <nav class="navbar bg-body-tertiary">
   <div style="display: flex;flex-direction: row;justify-content: space-between;width: 100%; align-items:center;">
-    <a href="restoran.php"><div style="display:flex;align-items: center; margin-left: 40px;"><img src="../image/logo3.png" alt="ImageDescription" class="logo" style="height: 60px; width: 180px;"></div></a>
+    <a href="index.php"><div style="display:flex;align-items: center; margin-left: 40px;"><img src="../image/logo3.png" alt="ImageDescription" class="logo" style="height: 60px; width: 180px;"></div></a>
     <div style="margin-right: 40px;">
     <a href="order.php" class="btn" style="margin-right: 20px;">Order</a>
     <a href="logout.php" class="btn btn-danger">Logout</a>

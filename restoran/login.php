@@ -44,7 +44,7 @@ if (isset($_POST['submit'])) {
                 if (password_verify($password, $row['password'])) {
                     $_SESSION['login'] = true;
                     $_SESSION['id'] = $row['id'];
-                    header("Location: restoran.php");
+                    header("Location: index.php");
                     exit;
                 } else {
                     echo "<script> alert('Wrong Password'); </script>";
@@ -75,7 +75,7 @@ if (isset($_POST['submit'])) {
     <body>
     <nav class="navbar bg-body-tertiary">
   <div style="display: flex;flex-direction: row;justify-content: space-between;width: 100%; align-items:center;">
-    <a href="restoran.php"><div style="display:flex;align-items: center; margin-left: 40px;"><img src="../image/logo3.png" alt="ImageDescription" class="logo" style="height: 60px; width: 180px;"></div></a>
+    <a href="index.php"><div style="display:flex;align-items: center; margin-left: 40px;"><img src="../image/logo3.png" alt="ImageDescription" class="logo" style="height: 60px; width: 180px;"></div></a>
 
   </div>
 </nav>

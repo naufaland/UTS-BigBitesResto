@@ -18,7 +18,7 @@ if(isset($_GET['id']) ){
         $q_run = mysqli_query($con, $q_insert);
         
         if($q_run){
-            header('location: restoran.php');
+            header('location: index.php');
         } else {
             echo "Data Failed";
         }
