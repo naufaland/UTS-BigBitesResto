@@ -16,7 +16,7 @@
         <div class="card rounded-3" style="background-color: #FFFFF0;">
           <div class="card-body p-4 p-md-5">   
             <h3 class="text-center mb-2 pb-2 pb-md-0 mb-md-3 px-md-2">SIGN UP YOUR ACCOUNT!</h3>
-            <form action="signup.php" method="post" class="px-md-2">
+            <form action="register.php" method="post" class="px-md-2">
             <div class="row">
             <div class="col">
                 <div class="form-outline mb-3">
@@ -75,14 +75,12 @@
     </div>
 </div>
         <?php
+        require 'config.php';
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
         error_reporting(E_ALL);
 
-        $con = mysqli_connect("localhost", "root", "", "resto_uts");
-
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $con = mysqli_connect("localhost", "root", "", "resto_uts");
 
             if (!$con) {
                 die('Connection failed: ' . mysqli_connect_error());
