@@ -47,6 +47,7 @@ if (isset($_POST['submit'])) {
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
@@ -67,7 +68,7 @@ if (isset($_POST['submit'])) {
                             <div class="col-sm-12 text-black">
                                 <div class="px-5 ms-xl-4">
                                     <i class="bx bx-run fa-2x me-3 pt-5 mt-xl-4"></i>
-                                    <span class="h1 fw-bold mb-0">Task Tracker</span>
+                                    <span class="h2 fw-bold mb-0">BIG BITES: RESTO</span>
                                 </div>
                             <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-3 pt-5 pt-xl-0 mt-xl-n5">
                                 <form action="login.php" method="post" style="width: 23rem;">

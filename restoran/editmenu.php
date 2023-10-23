@@ -38,6 +38,7 @@ if(isset($_POST['submit']))
 		echo "Data not update";
 	}
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -104,8 +105,5 @@ while ($row = mysqli_fetch_array($runData)) {
 } ?>
 </body>
 </html>
-<?php
 
-
-?>
 

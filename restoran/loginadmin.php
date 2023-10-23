@@ -67,7 +67,7 @@ if (isset($_POST['submit'])) {
                             <div class="col-sm-12 text-black">
                                 <div class="px-5 ms-xl-4">
                                     <i class="bx bx-run fa-2x me-3 pt-5 mt-xl-4"></i>
-                                    <span class="h1 fw-bold mb-0">Task Tracker</span>
+                                    <span class="h2 fw-bold mb-0">BIG BITES: ADMINISTRATOR</span>
                                 </div>
                             <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-3 pt-5 pt-xl-0 mt-xl-n5">
                                 <form action="loginadmin.php" method="post" style="width: 23rem;">
@@ -82,7 +82,6 @@ if (isset($_POST['submit'])) {
                                     <div class="pt-1 mb-2">
                                         <button class="btn btn-success btn-lg mb-1" type="submit" name="submit">Login</button>
                                     </div>
-                                    <p>Don't have an account? Please <a href="signup.php" class="link-info">Sign Up here</a></p>
                                 </form>
                             </div>
                             </div>
