@@ -43,8 +43,8 @@ if (!empty($_SESSION['id'])) {
                 <tr>
                     <th class="text-center" scope="col">No.</th>
                     <th class="text-center" scope="col">Nama</th>
-                    <th class="text-center" scope="col">image</th>
-                    <th class="text-center" scope="col">harga</th>
+                    <th class="text-center" scope="col">Image</th>
+                    <th class="text-center" scope="col">Harga</th>
                     <th class="text-center" scope="col">Edit</th>
                     <th class="text-center" scope="col">Delete</th>
                 </tr>
@@ -60,11 +60,12 @@ if (!empty($_SESSION['id'])) {
                 ?>
                 <tr>
                     <td class='text-center'><?php echo $sl; ?></td>
-                    <td class='text-left'>
+                    <td class='text-left' style="max-width: 100px;">
                         <div><b><?php echo $nama; ?></b></div>
                         <?php echo $category; ?>
                     </td>
-                    <td class='text-center'><?php echo $image; ?></td>
+                    
+                    <td class='text-center'><img src="<?php echo $image; ?>" style="height: 100px; width:80px;object-fit:cover;"/></td>
                     <td class='text-center'><?php echo $harga; ?></td>
                     <td class='text-center'>
                         <span>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 23, 2023 at 05:49 AM
+-- Generation Time: Oct 23, 2023 at 09:05 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -92,7 +92,14 @@ INSERT INTO `menu` (`id`, `nama`, `category`, `image`, `harga`) VALUES
 (5, 'Ice Matcha Latte', 'Drink', 'https://img.freepik.com/free-photo/green-tea-fresh-milk-served-with-delicious-snacks_1150-24494.jpg?w=360&t=st=1697984282~exp=1697984882~hmac=17884733dbff945e7ba1d68cd212e4ccfd8c8bcf2f108531f5bf0ef7ff479973', '17000'),
 (6, 'Banana Split', 'Dessert', 'https://www.tasteofhome.com/wp-content/uploads/2018/01/All-American-Banana-Split_EXPS_FT20_37953_F_0716_1.jpg?fit=700%2C1024', '20000'),
 (7, 'Dimsum', 'Appetizer', 'https://palpres.disway.id/upload/83f167921e5a8d3677aead0797407909.jpeg', '10000'),
-(8, 'Pistachio Gelato', 'Dessert', 'https://www.saveur.com/uploads/2019/02/08/RSQCZRUP32T6N4BOZJSCSQHTCI.jpg?auto=webp', '15000');
+(8, 'Pistachio Gelato', 'Dessert', 'https://www.saveur.com/uploads/2019/02/08/RSQCZRUP32T6N4BOZJSCSQHTCI.jpg?auto=webp', '15000'),
+(9, 'Ice Tea', 'Drink', 'https://magfood-amazy.com/wp-content/uploads/2017/12/ice-lemon-tea.jpg', '10000'),
+(10, 'California Roll', 'Appetizer', 'https://www.sidechef.com/recipe/8f379697-7d39-4f61-a336-fd4134eeee18.jpg?d=1408x1120', '20000'),
+(11, 'Caesar Salad', 'Appetizer', 'https://www.noracooks.com/wp-content/uploads/2022/06/vegan-caesar-salad-4.jpg', '15000'),
+(12, 'Chocolatte Lava Cake', 'Dessert', 'https://www.melskitchencafe.com/wp-content/uploads/2023/01/updated-lava-cakes7.jpg', '17500'),
+(13, 'Bakso Malang', 'Lunch', 'https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2023/08/02034124/ini-resep-bakso-malang-lezat-yang-menggugah-selera-halodoc.jpg.webp', '21000'),
+(14, 'Nasi Goreng Ayam', 'Lunch', 'https://awsimages.detik.net.id/community/media/visual/2022/08/07/resep-nasi-goreng-ayam-dan-ebi_43.jpeg?w=650&q=80', '23000'),
+(15, 'Nasi Ayam Geprek', 'Lunch', 'https://assets-a1.kompasiana.com/items/album/2023/08/10/ayam-geprek-removebg-64d50389633ebc267a30bde3.png?t=o&v=780', '25000');
 
 -- --------------------------------------------------------
 
@@ -156,7 +163,7 @@ ALTER TABLE `master_user`
 -- AUTO_INCREMENT for table `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `order`

@@ -27,11 +27,15 @@ foreach ($categories as $value)
     $product_result = mysqli_query($con, $product_query);
     while($sub_row = mysqli_fetch_array($product_result))
     {
-        $tab_content .= '<div class="col-sm-3" style="margin-bottom:36px; margin-right:20px">
+        $tab_content .= '<div class="col-md-2" style="margin-bottom:36px; margin-right:20px; display: flex; flex-direction: column; justify-content: flex-start; align-items:center;">
         <img src="'.$sub_row["image"].'" style="height: 100px; width:80px;object-fit:cover;"/>
-        <div class="text-left">
+        <br/>
+        <div class="text-center">
             <div><b>'.$sub_row["nama"].'</b></div>
         </div>
+        <div class="text-center">
+        <div>Rp. '.$sub_row["harga"].'</div>
+    </div>
         <span>
         <a href="addorder.php?id='.$sub_row["id"].'" class="btn addmenu" title="Add"">
             <i class="fa fa-plus fa-lg" aria-hidden="true"></i>
@@ -72,7 +76,7 @@ foreach ($categories as $value)
     ?>
     </ul>
 </br>
-        <div class="tab-content" style="display:flex; flex-direction:row;justify-content:flex-start;">
+        <div class="tab-content">
         <?php
     echo $tab_content;
     ?>
