@@ -1,8 +1,12 @@
 body {
-  background-color: aquamarine;
+  background-color:#FFEFBA;
 }
 
 .container {
   margin-top: 50px;
   border-radius: 20px;
+}
+
+.logo {
+  width: 100px;
 }

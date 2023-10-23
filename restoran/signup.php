@@ -13,7 +13,7 @@
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-lg-8 col-xl-6">
-        <div class="card rounded-3">
+        <div class="card rounded-3" style="background-color: #FFFFF0;">
           <div class="card-body p-4 p-md-5">   
             <h3 class="text-center mb-2 pb-2 pb-md-0 mb-md-3 px-md-2">SIGN UP YOUR ACCOUNT!</h3>
             <form action="signup.php" method="post" class="px-md-2">

@@ -59,15 +59,15 @@ if (isset($_POST['submit'])) {
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body>
-    <section class="vh-100 d-flex justify-content-center align-items-center" style="background: aquamarine;">
+    <section class="vh-100 d-flex justify-content-center align-items-center" style="background-color: #FFEFBA;">
         <div class="container">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-lg-8 col-xl-6">
-                    <div class="card rounded-3">
+                    <div class="card rounded-3" style="background: #FFFFF0;">
                         <div class="row">
                             <div class="col-sm-12 text-black">
                                 <div class="px-5 ms-xl-4">
-                                    <i class="bx bx-run fa-2x me-3 pt-5 mt-xl-4"></i>
+                                    <i class="bx bx-restaurant fa-2x me-3 pt-5 mt-xl-4"></i>
                                     <span class="h2 fw-bold mb-0">BIG BITES: RESTO</span>
                                 </div>
                             <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-3 pt-5 pt-xl-0 mt-xl-n5">
