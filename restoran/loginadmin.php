@@ -1,17 +1,30 @@
 <?php
 require 'config.php';
+$characters_on_image = 6;
+$possible_letters = '23456789bcdfghjkmnpqrstvwxyz';
+$code = '';
+$i = 0;
+while ($i < $characters_on_image) { 
+    $code .= substr($possible_letters, mt_rand(0, strlen($possible_letters)-1),     1);
+    $i++;
+    }
+    $_SESSION['6_letters_code'] = $code;
+
+if (isset($_GET['refresh'])) {
+    while ($i < $characters_on_image) { 
+        $code .= substr($possible_letters, mt_rand(0, strlen($possible_letters)-1),     1);
+        $i++;
+        }
+        $_SESSION['6_letters_code'] = $code;
+  }
 
 if (isset($_POST['submit'])) {
     $usernameEmail = $_POST['usernameEmail'];
     $password = $_POST['password'];
 
-    $recaptchaSecret = '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe';
-    $recaptchaResponse = $_POST['g-recaptcha-response'];
 
-    $recaptchaVerify = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$recaptchaSecret&response=$recaptchaResponse");
-    $recaptchaData = json_decode($recaptchaVerify);
-
-    if (!$recaptchaData->success) {
+    if (empty($_POST['generate_6_letters_code']) ||
+    strcasecmp($_POST['generate_6_letters_code'], $_POST['6_letters_code']) != 0) {
         echo "<script> alert('Please complete the CAPTCHA.'); </script>";
     } else {
         $query = "SELECT id, username, email, password FROM admin_user WHERE username = ? OR email = ?";
@@ -78,7 +91,17 @@ if (isset($_POST['submit'])) {
                                     <div class="mb-4">
                                         <input type="password" id="password" name="password" class="form-control form-control-lg" placeholder="Password" required />
                                     </div>
-                                    <div class="g-recaptcha mb-3" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+                                    <div style="display:flex;align-items: center;">
+                                        <div style="padding: 5px; border: 1px solid black;width:120px;display:flex; justify-content: center; align-items:center;font-size: 20px;margin-right: 10px;"><b><?php echo $code; ?></b></div>
+                                        <a href="login.php?refresh=true"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+                                        <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+                                        </svg></a>
+                                        <input type="text" id="generate_6_letters_code" name="generate_6_letters_code" class="form-control form-control-lg" style="display:none" value="<?php echo $_SESSION['6_letters_code']; ?>"/>
+                                    </div>
+                                    <label for="message">Enter the code above here :</label>
+                                    <input id="6_letters_code" name="6_letters_code" type="text">
+                                    <br/>
                                     <div class="pt-1 mb-2">
                                         <button class="btn btn-success btn-lg mb-1" type="submit" name="submit">Login</button>
                                     </div>
