@@ -18,7 +18,3 @@ Drink & Dessert.
 bawah harga menu.
 - User juga bisa melihat pesanan mereka dan juga total harga dari makanan
 yang user pesan pada tombol Order yang terletak di navbar kanan atas.
-- Untuk Akses ke admin, link harus menggunakan loginadmin.php seperti
-tautan berikut: http://utsbigbitesresto.rf.gd/loginadmin.php
-- Untuk akses ke admin, login dengan username: admin1 dan password:
-admin1resto
